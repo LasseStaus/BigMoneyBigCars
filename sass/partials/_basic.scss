@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//
+:root {
+  --color-1: #322f31;
+  --color-2: #a2a2a2;
+  --color-3: #f8f7f5;
+  --color-4: #eeeae0;
+  --color-5: #fbd2c0;
+  --color-6: #b2ccab;
+  --color-7: #a7bbce;
+
+  --nav-height: 8vh;
+  --scrollbar-height: 14px;
+
+  --font-1: "Montserrat", "sans-serif";
+  --font-2: "Montserrat", "sans-serif";
+  --font-3: "Montserrat", "sans-serif";
+}

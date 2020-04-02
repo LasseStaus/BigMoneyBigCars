@@ -1,0 +1,18 @@
+@mixin flexible() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin defaultBorder($width: 1px) {
+  border: $width solid black;
+  border-radius: 20px;
+}
+
+@mixin gridCenter() {
+  display: grid;
+  justify-content: center;
+
+  justify-items: center;
+  align-items: center;
+}
