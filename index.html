@@ -7,49 +7,67 @@
     <link rel="stylesheet" href="sass/styles.scss" />
   </head>
   <body>
-    <main>
-      <nav>
-        <div class="menu__toggler"><span></span></div>
-        <div id="mobile-menu">
-          <div class="mobile-menu-dropdown">
-            <div class="atags-mobile-menu">
-              <a href="#section_1">section1</a>
-              <a href="#section_2">section2</a>
-              <a href="#section_3">section3</a>
-              <a href="#section_4">section4</a>
-              <a href="#section_5">section5</a>
-            </div>
+    <nav>
+      <div class="menu__toggler"><span></span></div>
+      <div id="mobile-menu">
+        <div class="mobile-menu-dropdown">
+          <div class="atags-mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About me</a>
+            <a href="#section_5">Section5</a>
           </div>
         </div>
-        <div id="desktop-menu">
-          <a href="#section_1">section1</a>
-          <a href="#section_2">section2</a>
-          <a href="#section_3">section3</a>
-          <a href="#section_4">section4</a>
-          <a href="#section_5">section5</a>
-        </div>
-      </nav>
+      </div>
+      <div id="desktop-menu">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About me</a>
+        <a href="#section_5">Section5</a>
+      </div>
+    </nav>
+    <main>
       <div class="scroll-container">
         <div id="scrollinfo"></div>
       </div>
       <div class="the-container">
-        <section id="section_1">
-          <h1>section one</h1>
+        <section id="home">
+          <div class="cell">
+            <div class="container">
+              <div class="headline-container flexGB">
+                <h2>Lasse Stausgaard</h2>
+                <h2>Multimedia design student</h2>
+                <h3>Digital Design, front-end developer & Web developer</h3>
+              </div>
+              <div class="headshot-container pic headshot flexGB"></div>
+            </div>
+          </div>
         </section>
-        <section id="section_2">
-          <h1>section two</h1>
+        <section id="projects">
+          <div class="cell">
+            <div class="container">
+              <div class="project pic pic1"></div>
+              <div class="project pic pic1"></div>
+              <div class="project pic pic1"></div>
+              <div class="project pic pic1"></div>
+            </div>
+          </div>
         </section>
-        <div id="slower">Slower</div>
-        <div id="faster">Faster</div>
-        <section id="section_3">
-          <h1>section three</h1>
+        <!--  <div id="slower">Slower</div>
+        <div id="faster">Faster</div> -->
+        <section id="contact">
+          <div class="cell">
+            <div class="container"><h1>contact</h1></div>
+          </div>
         </section>
-        <section id="section_4">
-          <h1>section four</h1>
+        <section id="about">
+          <div class="cell">
+            <div class="container"><h1>about</h1></div>
+          </div>
         </section>
-        <section id="section_5">
-          <h1>section five</h1>
-        </section>
+        <section id="section_5"></section>
       </div>
     </main>
     <footer></footer>

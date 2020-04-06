@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "project1": {
+      "name": "project1",
+      "image": "p1.png"
+    },
+    "project2": {
+      "name": "project2"
+    },
+    "project3": {
+      "name": "project3"
+    },
+    "project4": {
+      "name": "project4"
+    }
+  }
+}

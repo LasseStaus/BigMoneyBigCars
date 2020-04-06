@@ -12,7 +12,6 @@
 @mixin gridCenter() {
   display: grid;
   justify-content: center;
-
   justify-items: center;
   align-items: center;
 }
