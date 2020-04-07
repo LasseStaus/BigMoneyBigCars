@@ -2,6 +2,7 @@
 @use "partials/basic";
 @use "partials/mixins";
 @use "partials/slider";
+@use "partials/mediaquery";
 
 h1 {
   font-size: 3vw;
@@ -284,6 +285,31 @@ a {
   padding-left: 1.5vw;
 }
 
+.pcontainer {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.link {
+  text-align: center;
+  padding-top: 2rem;
+}
+.tekst-container {
+  width: 100%;
+}
+.skills-container {
+  width: 100%;
+}
+
+.image-container {
+  width: 100%;
+  z-index: 1000;
+}
+.tekst-container > h2 {
+}
+
 @media only screen and (min-width: 728px) {
   #mobile-menu,
   .menu__toggler {
@@ -292,5 +318,33 @@ a {
 
   #desktop-menu {
     display: flex;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .slider {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .slider {
+    width: 700px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .slider {
+    width: 800px;
+  }
+  .tekst-container {
+    width: 45%;
+  }
+  .image-container {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .slider {
+    width: 1200px;
   }
 }

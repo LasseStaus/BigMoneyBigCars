@@ -11,18 +11,52 @@ function start() {
   //document.querySelector(".next").addEventListener("click", plusSlides);
   fetchJson();
 }
+async function fetchJson() {
+  let response = await fetch("test.json");
+  let jsonData = await response.json();
+  tis(jsonData);
+}
 
+function tis(jsonData) {
+  console.log(jsonData);
+
+  p1 = jsonData.projects.project1;
+  p2 = jsonData.projects.project2;
+  p3 = jsonData.projects.project3;
+  p4 = jsonData.projects.project4;
+
+  console.log(p1);
+  console.log(p2);
+  console.log(p3);
+  console.log(p4);
+  printJson();
+}
+
+function printJson() {
+  document.querySelector(".project1 h2").textContent = p1.title;
+  document.querySelector(".project1 .manchet").textContent = p1.manchet;
+  document.querySelector(".project1 .tekst").textContent = p1.tekst1;
+  document.querySelector(".project1 .link").href = p1.href;
+}
 const slider = document.querySelector(".slider");
 const buttons = document.querySelectorAll(".btn");
 const options = document.querySelectorAll(".option");
 const slides = document.querySelectorAll(".img");
 
+let p1;
+let p2;
+let p3;
+let p4;
+
 let index = 1;
 let op_index = 0;
-let size = slides[index].clientWidth;
+let size;
+console.log(size);
 
 update();
 function update() {
+  size = slides[index].clientWidth;
+
   slider.style.transform = "translateX(" + -size * index + "px)";
   options.forEach(op => op.classList.remove("colored"));
   options[op_index].classList.add("colored");
@@ -101,26 +135,6 @@ mAtags.forEach(a => {
 });
 
 //when scrolling happens, call scrolling()
-
-async function fetchJson() {
-  let response = await fetch("test.json");
-  let jsonData = await response.json();
-
-  tis(jsonData);
-}
-
-function tis(jsonData) {
-  console.log(jsonData);
-  let p1 = jsonData.projects.project1;
-  let p2 = jsonData.projects.project2;
-  let p3 = jsonData.projects.project3;
-  let p4 = jsonData.projects.project4;
-
-  console.log(p1);
-  console.log(p2);
-  console.log(p3);
-  console.log(p4);
-}
 
 //max scroll : scrollheight - clientheight
 

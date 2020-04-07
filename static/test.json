@@ -2,7 +2,11 @@
   "projects": {
     "project1": {
       "name": "project1",
-      "image": "p1.png"
+      "image": "p1.png",
+      "title": "Moleinfested Farm",
+      "manchet": "First semester JS project",
+      "tekst1": "This project was about creating a penis",
+      "href": "https://www.google.dk/"
     },
     "project2": {
       "name": "project2"
