@@ -24,6 +24,7 @@ function tis(jsonData) {
   p2 = jsonData.projects.project2;
   p3 = jsonData.projects.project3;
   p4 = jsonData.projects.project4;
+  p5 = jsonData.projects.project5;
 
   console.log(p1);
   console.log(p2);
@@ -37,6 +38,45 @@ function printJson() {
   document.querySelector(".project1 .manchet").textContent = p1.manchet;
   document.querySelector(".project1 .tekst").textContent = p1.tekst1;
   document.querySelector(".project1 .link").href = p1.href;
+  document.querySelector(".project1 .projectImg").src = p1.image;
+
+  document.querySelector(".project2 h2").textContent = p2.title;
+  document.querySelector(".project2 .manchet").textContent = p2.manchet;
+  document.querySelector(".project2 .tekst").textContent = p2.tekst1;
+  document.querySelector(".project2 .link").href = p2.href;
+  document.querySelector(".project2 .projectImg").src = p1.image;
+
+  document.querySelector(".project3 h2").textContent = p3.title;
+  document.querySelector(".project3 .manchet").textContent = p3.manchet;
+  document.querySelector(".project3 .tekst").textContent = p3.tekst1;
+  document.querySelector(".project3 .link").href = p3.href;
+  document.querySelector(".project3 .projectImg").src = p1.image;
+
+  document.querySelector(".project4 h2").textContent = p4.title;
+  document.querySelector(".project4 .manchet").textContent = p4.manchet;
+  document.querySelector(".project4 .tekst").textContent = p4.tekst1;
+  document.querySelector(".project4 .link").href = p4.href;
+  document.querySelector(".project4 .projectImg").src = p1.image;
+
+  document.querySelector(".project5 h2").textContent = p5.title;
+  document.querySelector(".project5 .manchet").textContent = p5.manchet;
+  document.querySelector(".project5 .tekst").textContent = p5.tekst1;
+  document.querySelector(".project5 .link").href = p5.href;
+  document.querySelector(".project5 .projectImg").src = p1.image;
+
+  // the first & last of html for slider
+
+  document.querySelector(".projectFirst h2").textContent = p1.title;
+  document.querySelector(".projectFirst .manchet").textContent = p1.manchet;
+  document.querySelector(".projectFirst .tekst").textContent = p1.tekst1;
+  document.querySelector(".projectFirst .link").href = p1.href;
+  document.querySelector(".projectFirst .projectImg").src = p1.image;
+
+  document.querySelector(".projectLast h2").textContent = p5.title;
+  document.querySelector(".projectLast .manchet").textContent = p5.manchet;
+  document.querySelector(".projectLast .tekst").textContent = p5.tekst1;
+  document.querySelector(".projectLast .link").href = p5.href;
+  document.querySelector(".projectLast .projectImg").src = p1.image;
 }
 const slider = document.querySelector(".slider");
 const buttons = document.querySelectorAll(".btn");
@@ -47,6 +87,7 @@ let p1;
 let p2;
 let p3;
 let p4;
+let p5;
 
 let index = 1;
 let op_index = 0;
@@ -71,7 +112,7 @@ function btnCheck() {
   console.log(index);
   if (this.id === "prev") {
     index--;
-    if (op_index == 4) {
+    if (op_index == 0) {
       op_index = 4;
     } else {
       op_index--;

@@ -2,20 +2,44 @@
   "projects": {
     "project1": {
       "name": "project1",
-      "image": "p1.png",
-      "title": "Moleinfested Farm",
-      "manchet": "First semester JS project",
-      "tekst1": "This project was about creating a penis",
-      "href": "https://www.google.dk/"
+      "image": "projectImgs/koga.png",
+      "title": "Kogacenter",
+      "manchet": "2. semester project",
+      "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
+      "href": "https://www.mostvalue.dk/Koga"
     },
     "project2": {
-      "name": "project2"
+      "name": "project2",
+      "image": "projectImgs/koga.png",
+      "title": "Museum of Science & Technology",
+      "manchet": "3. semester project",
+      "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
+      "href": "http://mostvalue.dk/dtm/"
     },
+
     "project3": {
-      "name": "project3"
+      "name": "project4",
+      "image": "projectImgs/koga.png",
+      "title": "Council of Safe Trafic",
+      "manchet": "2. semester project",
+      "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
+      "href": "http://mostvalue.dk/kea/2-semester/tema-08/optildig/"
     },
     "project4": {
-      "name": "project4"
+      "name": "project4",
+      "image": "projectImgs/koga.png",
+      "title": "Whack-a-mole",
+      "manchet": "1. semester project",
+      "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
+      "href": "http://mostvalue.dk/kea/02-animation/spil/"
+    },
+    "project5": {
+      "name": "project5",
+      "image": "projectImgs/koga.png",
+      "title": "Too Much Sharing",
+      "manchet": "1. semester project",
+      "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
+      "href": "http://mostvalue.dk/kea/02-animation/Produktion/"
     }
   }
 }
