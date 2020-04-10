@@ -17,9 +17,15 @@ h3 {
 main {
 }
 
+input,
+textarea {
+  width: 100%;
+  padding: 4px;
+}
+
 #scrollinfo {
   height: var(--scrollbar-height);
-  background-color: var(--color-2);
+  background-color: transparent;
   width: 100%;
   position: fixed;
   top: var(--nav-height);
@@ -32,7 +38,7 @@ nav {
   position: fixed;
   top: 0;
   @include mixins.gridCenter;
-
+  border-bottom: 1px solid black;
   height: var(--nav-height);
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
@@ -90,6 +96,7 @@ nav {
   border-right: 2px solid grey;
   margin-right: 20px;
   padding-right: 20px;
+  overflow: hidden;
 }
 #home .container .headshot-container {
   border-radius: 50%;
@@ -112,6 +119,47 @@ section {
   display: table;
 }
 
+.hide {
+  opacity: 0;
+}
+
+#home.current {
+  $delay: 0.5s;
+  .headline-container {
+    h1 {
+      color: red;
+      transition: all 1s ease-in;
+      transition-delay: $delay;
+      transform: translateX(0px);
+    }
+    h2 {
+      color: red;
+      transition: all 1s ease-in;
+      transition-delay: $delay * 2;
+      transform: translateX(0px);
+    }
+    h3 {
+      color: red;
+      transition: all 1s ease-in;
+      transition-delay: $delay * 3;
+      transform: translateX(0px);
+    }
+  }
+  .headshot-container {
+    transition: fadeIn 3s;
+    transition-delay: $delay * 3;
+  }
+}
+
+.headline-container h1 {
+  transform: translateX(700px);
+}
+.headline-container h2 {
+  transform: translateX(700px);
+}
+.headline-container h3 {
+  transform: translateX(700px);
+}
 /* videos */
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -265,6 +313,31 @@ section {
   }
 }
 
+.navigation {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  z-index: 7000;
+}
+.navigation a {
+  transform: rotate(45deg);
+}
+.tester {
+  position: absolute;
+  margin-left: 20px;
+  left: 0;
+  font-size: 2vw;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 1;
+}
+
+#desktop-menu > a.marked {
+  color: black;
+  text-decoration: underline;
+}
 /* Animation til text -SLUT- */
 
 /* Mobile nav & Burgermenu sektion -SLUT- */
@@ -283,6 +356,7 @@ a {
   color: var(--color-2);
   font-size: 1.2vw;
   padding-left: 1.5vw;
+  opacity: 1;
 }
 
 .pcontainer {

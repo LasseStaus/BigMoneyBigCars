@@ -45,7 +45,7 @@ export function projectElement(data2, p) {
 } */
 
 export function scrolling() {
-  console.log("scrolling");
+  //  console.log("scrolling");
   let cnt = document.querySelector(".the-container");
   let ratio = cnt.scrollTop / (cnt.scrollHeight - cnt.clientHeight);
   let scrollinfo = document.querySelector("#scrollinfo");

@@ -10,7 +10,7 @@
     },
     "project2": {
       "name": "project2",
-      "image": "projectImgs/koga.png",
+      "image": "projectImgs/dtm.png",
       "title": "Museum of Science & Technology",
       "manchet": "3. semester project",
       "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
@@ -19,7 +19,7 @@
 
     "project3": {
       "name": "project4",
-      "image": "projectImgs/koga.png",
+      "image": "projectImgs/rfst.png",
       "title": "Council of Safe Trafic",
       "manchet": "2. semester project",
       "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
@@ -27,7 +27,7 @@
     },
     "project4": {
       "name": "project4",
-      "image": "projectImgs/koga.png",
+      "image": "projectImgs/game1.png",
       "title": "Whack-a-mole",
       "manchet": "1. semester project",
       "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
@@ -35,7 +35,7 @@
     },
     "project5": {
       "name": "project5",
-      "image": "projectImgs/koga.png",
+      "image": "projectImgs/tms.png",
       "title": "Too Much Sharing",
       "manchet": "1. semester project",
       "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
