@@ -43,7 +43,7 @@ export function projectElement(data2, p) {
     parent.appendChild(e);
   });
 } */
-
+/* 
 export function scrolling() {
   //  console.log("scrolling");
   let cnt = document.querySelector(".the-container");
@@ -55,3 +55,4 @@ export function scrolling() {
 
   //console.log(ratio);
 }
+ */

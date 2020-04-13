@@ -5,22 +5,92 @@
 @use "partials/mediaquery";
 
 h1 {
-  font-size: 3vw;
 }
 p,
 a,
 h1,
 h2,
 h3 {
-  font-family: var(--font-1);
+  font-family: var(--font-6);
+  color: var(--color-1);
 }
+
+h2 {
+  font-size: 33px;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  opacity: 1;
+}
+p {
+}
+
+p.end {
+  font-weight: 600;
+}
+
+body {
+  background-color: white;
+}
+
+.manchet {
+  filter: grayscale(50%);
+}
+
+section h2,
+section p {
+  padding-bottom: 0.5rem;
+}
+
+p.manchet {
+  font-weight: 500;
+}
+p {
+}
+
+#home {
+  h1 {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  h2,
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    padding: 0;
+  }
+}
+
+#home h1 {
+  font-family: var(--font-6);
+  font-weight: 100;
+  color: var(--color-2);
+  text-transform: capitalize;
+  font-style: italic;
+}
+#home h2 {
+  font-family: var(--font-2);
+  color: var(--color-1);
+  opacity: 0.7;
+  text-transform: uppercase;
+
+  font-style: italic;
+}
+
+#home h3 {
+  color: var(--color-2);
+  font-family: var(--font-5);
+  font-style: italic;
+}
+
 main {
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 4px;
+  padding: 1.5vh;
+}
+textarea {
 }
 
 #scrollinfo {
@@ -38,7 +108,8 @@ nav {
   position: fixed;
   top: 0;
   @include mixins.gridCenter;
-  border-bottom: 1px solid black;
+
+  border-bottom: 1px solid var(--color-1);
   height: var(--nav-height);
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
@@ -48,14 +119,14 @@ nav {
 }
 
 .the-container {
-  height: calc(100vh - var(--nav-height) - var(--scrollbar-height));
+  height: calc(100vh - var(--nav-height));
+
   overflow: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: both proximity;
   perspective: 2px;
   transition: 0.5s ease-in-out;
   position: relative;
-  top: calc(var(--nav-height) + var(--scrollbar-height));
+  top: calc(var(--nav-height));
 }
 
 #projects .container {
@@ -66,6 +137,9 @@ nav {
 }
 .the-container::-webkit-scrollbar {
   display: none;
+}
+.me {
+  margin-top: 15px;
 }
 
 #home {
@@ -85,30 +159,37 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 #home .container {
-  flex-wrap: nowrap;
+  flex-wrap: wrap-reverse;
 }
 
 #home .container .headline-container {
-  flex-grow: 6;
-  flex-basis: 200px;
-  border-right: 2px solid grey;
-  margin-right: 20px;
-  padding-right: 20px;
+  flex-grow: 1;
+  flex-basis: 400px;
+  //border-right: 2px solid grey;
+
   overflow: hidden;
+  text-align: center;
 }
 #home .container .headshot-container {
   border-radius: 50%;
   overflow: hidden;
   flex-grow: 1;
-  flex-basis: 200px;
+  flex-basis: 400px;
+  max-width: 150px;
+  margin-bottom: 2rem;
 }
 
 .project {
   display: flex;
   flex-grow: 1;
   flex-basis: 400px;
+}
+.project img {
+  cursor: pointer;
 }
 section {
   max-width: 1180px;
@@ -124,25 +205,29 @@ section {
 }
 
 #home.current {
-  $delay: 0.5s;
+  $delay: 1s;
+  $time: 1.5s;
   .headline-container {
     h1 {
-      color: red;
-      transition: all 1s ease-in;
+      transition: all $time ease-in-out;
       transition-delay: $delay;
-      transform: translateX(0px);
+      transform: translateX(0%);
+      font-style: normal;
     }
     h2 {
-      color: red;
-      transition: all 1s ease-in;
+      //   color: red;
+      transition: all $time ease-in-out;
       transition-delay: $delay * 2;
-      transform: translateX(0px);
+      transform: translateX(0%);
+
+      font-style: normal;
     }
     h3 {
-      color: red;
-      transition: all 1s ease-in;
+      //   color: red;
+      transition: all $time ease-in;
       transition-delay: $delay * 3;
-      transform: translateX(0px);
+      transform: translateX(0%);
+      font-style: normal;
     }
   }
   .headshot-container {
@@ -152,13 +237,13 @@ section {
 }
 
 .headline-container h1 {
-  transform: translateX(700px);
+  transform: translateX(200%);
 }
 .headline-container h2 {
-  transform: translateX(700px);
+  transform: translateX(200%);
 }
 .headline-container h3 {
-  transform: translateX(700px);
+  transform: translateX(200%);
 }
 /* videos */
 
@@ -209,6 +294,9 @@ section {
   top: calc(var(--nav-height)+ var(--scrollbar-height));
   right: -70vw;
   padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shadow {
@@ -232,12 +320,17 @@ section {
   display: flex;
   padding: 5vw;
   justify-content: flex-end;
-  font-size: 5vw;
   position: relative;
 
-  color: var(--color-1);
+  color: var(--color-2);
   text-align: left;
   animation: fade-in-left 2s;
+  font-family: var(--font-4);
+
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 1;
 }
 
 /* burgermenu'en & span's rotationer  -START- */
@@ -304,20 +397,22 @@ section {
 @keyframes fadeinleft {
   0% {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(200px);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0%);
+    transform: translateX(0px);
   }
 }
 
 .navigation {
+  display: flex;
+  display: none;
   position: absolute;
   left: 40px;
   top: 50%;
-  display: flex;
+
   flex-direction: column;
   z-index: 7000;
 }
@@ -325,18 +420,28 @@ section {
   transform: rotate(45deg);
 }
 .tester {
-  position: absolute;
-  margin-left: 20px;
-  left: 0;
-  font-size: 2vw;
+  font-family: var(--font-4);
+  grid-column: 3;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 300;
+  letter-spacing: 1px;
   opacity: 1;
 }
 
 #desktop-menu > a.marked {
-  color: black;
-  text-decoration: underline;
+  color: var(--color-1);
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--color-1);
+  transition: 0.3s ease-in-out;
+}
+#desktop-menu > a:hover {
+  color: var(--color-1);
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.atags-mobile-menu a.marked {
+  color: var(--color-1);
 }
 /* Animation til text -SLUT- */
 
@@ -352,11 +457,49 @@ a {
   grid-column: 4 / span 2;
 }
 
+.linkedIn {
+  color: #0077b5;
+}
+.mail input,
+.mail textarea {
+  background-color: white;
+  border-top: 2px solid var(--color-7);
+  border-left: 4px solid var(--color-7);
+  border-right: 4px solid var(--color-7);
+  border-bottom: 2px solid var(--color-7);
+}
+
+.col-12 {
+  background: var(--color-8);
+}
+form {
+  border: 8px solid var(--color-8);
+
+  background-color: var(--color-3);
+  border-radius: 8px;
+}
+
+input.butn {
+  margin-left: 2px;
+  margin-right: 2px;
+  cursor: pointer;
+  border-bottom: 4px solid var(--color-7);
+  background-color: var(--color-8);
+  color: var(--color-3);
+  transition: 0.2s ease-in-out;
+  border: 3px solid var(--color-8);
+}
+input.butn:hover {
+  background-color: var(--color-5);
+  color: var(--color-1);
+  letter-spacing: 1px;
+}
 #desktop-menu a {
   color: var(--color-2);
-  font-size: 1.2vw;
-  padding-left: 1.5vw;
+  margin-left: 2vw;
   opacity: 1;
+  font-family: var(--font-1);
+  transition: 0.3s ease-in-out;
 }
 
 .pcontainer {
@@ -370,8 +513,19 @@ a {
   text-align: center;
   padding-top: 2rem;
 }
+.link p {
+  cursor: pointer;
+  color: var(--color-2);
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.link p:hover {
+  color: var(--color-1);
+}
 .tekst-container {
   width: 100%;
+  padding: 0.5rem;
 }
 .skills-container {
   width: 100%;
@@ -384,14 +538,9 @@ a {
 .tekst-container > h2 {
 }
 
-@media only screen and (min-width: 728px) {
-  #mobile-menu,
-  .menu__toggler {
-    display: none;
-  }
-
-  #desktop-menu {
-    display: flex;
+@media only screen and (min-width: 400px) {
+  #home .container .headshot-container {
+    max-width: 260px;
   }
 }
 
@@ -400,21 +549,111 @@ a {
     width: 600px;
   }
 }
+@media only screen and (min-width: 650px) {
+  .slider {
+    width: 650px;
+  }
+}
 @media only screen and (min-width: 700px) {
   .slider {
     width: 700px;
   }
 }
+@media only screen and (min-width: 750px) {
+  .slider {
+    width: 750px;
+  }
+}
 @media only screen and (min-width: 800px) {
+  #mobile-menu,
+  .menu__toggler {
+    display: none;
+  }
+  .the-container {
+    scroll-snap-type: both proximity;
+  }
+
+  .the-container {
+    border-left: 10px solid var(--color-8);
+    border-right: 10px solid var(--color-8);
+  }
+
+  nav {
+    border-left: 10px solid var(--color-8);
+    border-right: 10px solid var(--color-8);
+  }
+
+  ul {
+    top: 80%;
+  }
+
+  #prev,
+  #next {
+    display: block;
+    font-size: 33px;
+  }
+  .scontent {
+  }
+
+  #home {
+    h1,
+    h2,
+    h3 {
+    }
+  }
+
+  #home .container .headline-container {
+    text-align: left;
+    margin-right: 20px;
+    padding-right: 20px;
+  }
+
+  input,
+  textarea {
+    padding: 1vh;
+  }
+  nav {
+    border-bottom: none;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  #desktop-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tester {
+    display: none;
+  }
   .slider {
     width: 800px;
     height: 450px;
   }
+  .container {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
   .tekst-container {
-    width: 45%;
+    width: 50%;
+    padding: 4rem;
+  }
+  .skills-container {
+    width: 50%;
+  }
+  #contact .tekst-container p {
+    padding-bottom: 2rem;
   }
   .image-container {
-    width: 45%;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .slider {
+    width: 900px;
   }
 }
 

@@ -23,6 +23,11 @@ img {
 .pic1 {
   background-image: url("/static/imgs/t.jpg");
 }
+.marmor {
+  background-image: url("/static/imgs/marmor2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .headshot {
   background-image: url("/static/imgs/headshot.jpg");
@@ -36,6 +41,9 @@ img {
   background-position: 75%, 50%;
 }
 
+.borderT {
+  border-top: 2px solid var(--color-7);
+}
 //
 :root {
   --color-1: #322f31;
@@ -45,11 +53,15 @@ img {
   --color-5: #fbd2c0;
   --color-6: #b2ccab;
   --color-7: #a7bbce8e;
+  --color-8: #87afc7;
 
   --nav-height: 8vh;
   --scrollbar-height: 2px;
 
   --font-1: "Montserrat", "sans-serif";
-  --font-2: "Montserrat", "sans-serif";
-  --font-3: "Montserrat", "sans-serif";
+  --font-2: "Oswald", sans-serif;
+  --font-3: "Roboto", sans-serif;
+  --font-4: "PT Serif", serif;
+  --font-5: "PT Sans", sans-serif;
+  --font-6: "Quicksand", sans-serif;
 }
