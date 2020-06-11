@@ -10,26 +10,24 @@ function start() {
   document.querySelector(".the-container").addEventListener("scroll", scrolling);
   //document.querySelector(".next").addEventListener("click", plusSlides);
   fetchJson();
-  observerF();
+  // observerF();
 }
 
-let optionsObserver;
+/* let optionsObserver;
 
 function observerF() {
   optionsObserver = {
     root: null,
-    rootMargin: "",
-    threshold: 0.8,
+    rootMargin: "100%",
+    threshold: 0.9,
   };
   let observer = new IntersectionObserver(beTouching, optionsObserver);
   document.querySelectorAll(".the-container section").forEach((section) => {
     observer.observe(section);
-    //console.log("watching", p.textContent);
   });
 }
 let tester = document.querySelector(".tester");
 function beTouching(entries, ob) {
-  //entries all 30 paragraphs
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log(entry.target);
@@ -72,20 +70,18 @@ function beTouching(entries, ob) {
 
       entry.target;
       console.log("intersecting");
-      //console.log(entry.target);
-      //console.log(entry.time, entry.intersectionRatio);
+
       entry.target.classList.remove("hide");
 
       entry.target.classList.add("current");
       entry.target.classList.add("animated", "zoomIn");
-      //ob.unobserve(entry.target);
     } else {
       entry.target.classList.add("hide");
       entry.target.classList.remove("current");
       entry.target.classList.remove("animated", "zoomIn");
     }
   });
-}
+} */
 
 async function fetchJson() {
   let response = await fetch("test.json");
@@ -101,6 +97,8 @@ function tis(jsonData) {
   p3 = jsonData.projects.project3;
   p4 = jsonData.projects.project4;
   p5 = jsonData.projects.project5;
+  p6 = jsonData.projects.project6;
+  p7 = jsonData.projects.project7;
 
   console.log(p1);
   console.log(p2);
@@ -135,6 +133,16 @@ function printJson() {
   document.querySelector(".project5 .link").href = p5.href;
   document.querySelector(".project5 .projectImg").src = p5.image;
 
+  document.querySelector(".project6 h2").textContent = p6.title;
+  document.querySelector(".project6 .manchet").textContent = p6.manchet;
+  document.querySelector(".project6 .link").href = p6.href;
+  document.querySelector(".project6 .projectImg").src = p6.image;
+
+  document.querySelector(".project7 h2").textContent = p7.title;
+  document.querySelector(".project7 .manchet").textContent = p7.manchet;
+  document.querySelector(".project7 .link").href = p7.href;
+  document.querySelector(".project7 .projectImg").src = p7.image;
+
   // the first & last of html for slider
 
   document.querySelector(".projectFirst h2").textContent = p1.title;
@@ -159,6 +167,8 @@ let p2;
 let p3;
 let p4;
 let p5;
+let p6;
+let p7;
 
 let index = 1;
 let op_index = 0;
@@ -184,7 +194,7 @@ function btnCheck() {
   if (this.id === "prev") {
     index--;
     if (op_index == 0) {
-      op_index = 4;
+      op_index = 6;
     } else {
       op_index--;
     }
@@ -192,7 +202,7 @@ function btnCheck() {
   } else if (this.id === "next") {
     console.log(index);
     index++;
-    if (op_index == 4) {
+    if (op_index == 6) {
       op_index = 0;
     } else {
       op_index++;

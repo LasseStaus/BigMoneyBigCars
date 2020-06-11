@@ -40,6 +40,22 @@
       "manchet": "1. semester project",
       "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
       "href": "http://mostvalue.dk/kea/02-animation/Produktion/"
+    },
+    "project6": {
+      "name": "project6",
+      "image": "projectImgs/dxc.png",
+      "title": "DXC Technology",
+      "manchet": "3. semester project",
+      "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
+      "href": "http://mostvalue.dk/DXC"
+    },
+    "project7": {
+      "name": "project7",
+      "image": "projectImgs/foobar.png",
+      "title": "Foobar Mobile/dashboard",
+      "manchet": "3. semester exam project",
+      "tekst1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis adipisci accusamus quia, quasi asperiores aliquid modi libero culpa iure doloribus eos saepe eius pariatur sint velit expedita laboriosam, officiis et alias quas dolore exercitationem. Error nulla labore reiciendis dicta inventore. Sapiente dicta veritatis tenetur in corporis enim deleniti porro!",
+      "href": "http://mostvalue.dk/Foobar"
     }
   }
 }

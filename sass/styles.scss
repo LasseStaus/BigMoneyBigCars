@@ -4,6 +4,10 @@
 @use "partials/slider";
 @use "partials/mediaquery";
 
+html {
+  font-family: var(--font-7);
+}
+
 h1 {
 }
 p,
@@ -11,7 +15,6 @@ a,
 h1,
 h2,
 h3 {
-  font-family: var(--font-6);
   color: var(--color-1);
 }
 
@@ -22,10 +25,11 @@ h2 {
   opacity: 1;
 }
 p {
+  font-size: 12px;
 }
 
 p.end {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 body {
@@ -38,11 +42,17 @@ body {
 
 section h2,
 section p {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.7rem;
+}
+
+section h2 {
+  color: var(--color-8);
+  font-weight: 900;
 }
 
 p.manchet {
-  font-weight: 500;
+  font-weight: 600;
+  padding-bottom: 1rem;
 }
 p {
 }
@@ -61,24 +71,21 @@ p {
 }
 
 #home h1 {
-  font-family: var(--font-6);
   font-weight: 100;
   color: var(--color-2);
   text-transform: capitalize;
   font-style: italic;
 }
 #home h2 {
-  font-family: var(--font-2);
-  color: var(--color-1);
-  opacity: 0.7;
+  color: var(--color-8);
+  opacity: 1;
   text-transform: uppercase;
 
   font-style: italic;
 }
 
 #home h3 {
-  color: var(--color-2);
-  font-family: var(--font-5);
+  color: black;
   font-style: italic;
 }
 
@@ -108,7 +115,9 @@ nav {
   position: fixed;
   top: 0;
   @include mixins.gridCenter;
-
+  /* 
+  background-color: #b8c6db;
+  background-image: linear-gradient(180deg, #f6f6f6 0, #eeeff1 34%); */
   border-bottom: 1px solid var(--color-1);
   height: var(--nav-height);
   width: 100%;
@@ -120,7 +129,9 @@ nav {
 
 .the-container {
   height: calc(100vh - var(--nav-height));
-
+  /* 
+  background-color: #b8c6db;
+  background-image: linear-gradient(180deg, #eeeff1 0, #fafafa 34%); */
   overflow: scroll;
   scroll-behavior: smooth;
   perspective: 2px;
@@ -180,6 +191,7 @@ nav {
   flex-grow: 1;
   flex-basis: 400px;
   max-width: 150px;
+  box-shadow: 0px 0px 6px 0.5px rgba(0, 0, 0, 1);
   margin-bottom: 2rem;
 }
 
@@ -201,10 +213,10 @@ section {
 }
 
 .hide {
-  opacity: 0;
+  // opacity: 0;
 }
 
-#home.current {
+#home/* .current */ {
   $delay: 1s;
   $time: 1.5s;
   .headline-container {
@@ -213,13 +225,16 @@ section {
       transition-delay: $delay;
       transform: translateX(0%);
       font-style: normal;
+      font-size: 25px;
+      font-weight: 400;
     }
     h2 {
       //   color: red;
       transition: all $time ease-in-out;
       transition-delay: $delay * 2;
       transform: translateX(0%);
-
+      font-weight: 700;
+      font-size: 25px;
       font-style: normal;
     }
     h3 {
@@ -228,6 +243,8 @@ section {
       transition-delay: $delay * 3;
       transform: translateX(0%);
       font-style: normal;
+      font-size: 25px;
+      font-weight: 700;
     }
   }
   .headshot-container {
@@ -236,7 +253,7 @@ section {
   }
 }
 
-.headline-container h1 {
+/* .headline-container h1 {
   transform: translateX(200%);
 }
 .headline-container h2 {
@@ -244,7 +261,7 @@ section {
 }
 .headline-container h3 {
   transform: translateX(200%);
-}
+} */
 /* videos */
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -286,13 +303,13 @@ section {
   position: absolute;
   z-index: 998;
   color: black;
-  background: var(--color-3);
+  background: whitesmoke;
   height: 100vh;
   display: inline-block;
-  transition: 400ms right cubic-bezier(0, 0.2, 0.38, 0.7);
-  width: 70vw;
-  top: calc(var(--nav-height)+ var(--scrollbar-height));
-  right: -70vw;
+  transition: 300ms right cubic-bezier(0, 0.2, 0.38, 0.7);
+  width: 100%;
+  top: 0;
+  right: -100%;
   padding: 50px;
   display: flex;
   justify-content: center;
@@ -309,7 +326,6 @@ section {
 }
 .mobile-menu-dropdown.active {
   right: 0;
-  top: calc(var(--nav-height)+ var(--scrollbar-height));
 
   /*  background-image: url();
     background-size: cover;
@@ -318,19 +334,19 @@ section {
 
 .atags-mobile-menu a {
   display: flex;
-  padding: 5vw;
+  padding: 10vw;
   justify-content: flex-end;
   position: relative;
 
   color: var(--color-2);
   text-align: left;
-  animation: fade-in-left 2s;
-  font-family: var(--font-4);
 
   text-transform: uppercase;
   font-weight: 300;
+  font-size: 20px;
   letter-spacing: 1px;
   opacity: 1;
+  font-weight: bold;
 }
 
 /* burgermenu'en & span's rotationer  -START- */
@@ -340,6 +356,8 @@ section {
   grid-column: 5;
   outline: none;
   cursor: pointer;
+  position: absolute;
+  left: 26px;
 }
 
 .menu__toggler span,
@@ -352,7 +370,7 @@ section {
   height: 2.5px;
   background: black;
   border-radius: 20px;
-  transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 300ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .menu__toggler span::before {
@@ -391,7 +409,7 @@ section {
   -moz-animation: fadeinleft 600ms ease-in-out;
   -o-animation: fadeinleft 600ms ease-in-out;
   -ms-animation: fadeinleft 600ms ease-in-out; */
-  animation: fadeinleft 800ms ease-in-out;
+  // animation: fadeinleft 1000ms linear;
 }
 
 @keyframes fadeinleft {
@@ -420,18 +438,18 @@ section {
   transform: rotate(45deg);
 }
 .tester {
-  font-family: var(--font-4);
   grid-column: 3;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 1px;
   opacity: 1;
+  font-weight: bold;
 }
 
 #desktop-menu > a.marked {
-  color: var(--color-1);
+  color: var(--color-8);
   padding-bottom: 2px;
-  border-bottom: 2px solid var(--color-1);
+  border-bottom: 2px solid var(--color-8);
   transition: 0.3s ease-in-out;
 }
 #desktop-menu > a:hover {
@@ -473,6 +491,7 @@ a {
   background: var(--color-8);
 }
 form {
+  width: 100%;
   border: 8px solid var(--color-8);
 
   background-color: var(--color-3);
@@ -490,16 +509,22 @@ input.butn {
   border: 3px solid var(--color-8);
 }
 input.butn:hover {
-  background-color: var(--color-5);
-  color: var(--color-1);
+  background-color: snow;
+  color: black;
   letter-spacing: 1px;
 }
 #desktop-menu a {
-  color: var(--color-2);
+  color: var(--color-1);
   margin-left: 2vw;
   opacity: 1;
-  font-family: var(--font-1);
   transition: 0.3s ease-in-out;
+  color: var(--color-8);
+  margin-left: 2vw;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 0px var(--color-8);
 }
 
 .pcontainer {
@@ -511,11 +536,10 @@ input.butn:hover {
 }
 .link {
   text-align: center;
-  padding-top: 2rem;
 }
 .link p {
   cursor: pointer;
-  color: var(--color-2);
+  color: black;
   transition: 0.3s;
   font-weight: 700;
 }
@@ -526,6 +550,10 @@ input.butn:hover {
 .tekst-container {
   width: 100%;
   padding: 0.5rem;
+  span {
+    color: black;
+    font-weight: bold;
+  }
 }
 .skills-container {
   width: 100%;
@@ -534,6 +562,9 @@ input.butn:hover {
 .image-container {
   width: 100%;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 .tekst-container > h2 {
 }
@@ -555,6 +586,15 @@ input.butn:hover {
   }
 }
 @media only screen and (min-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+  .image-container {
+    width: 50%;
+  }
+  #contact .image-container {
+    display: block;
+  }
   .slider {
     width: 700px;
   }
@@ -565,6 +605,9 @@ input.butn:hover {
   }
 }
 @media only screen and (min-width: 800px) {
+  .btn {
+    top: 70%;
+  }
   #mobile-menu,
   .menu__toggler {
     display: none;
@@ -574,13 +617,13 @@ input.butn:hover {
   }
 
   .the-container {
-    border-left: 10px solid var(--color-8);
-    border-right: 10px solid var(--color-8);
+    border-left: 20px solid var(--color-8);
+    border-right: 20px solid var(--color-8);
   }
 
   nav {
-    border-left: 10px solid var(--color-8);
-    border-right: 10px solid var(--color-8);
+    border-left: 20px solid var(--color-8);
+    border-right: 20px solid var(--color-8);
   }
 
   ul {
@@ -637,8 +680,13 @@ input.butn:hover {
     padding-right: 0rem;
   }
   .tekst-container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-right: 1rem;
     width: 50%;
-    padding: 4rem;
   }
   .skills-container {
     width: 50%;
@@ -648,17 +696,50 @@ input.butn:hover {
   }
   .image-container {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #contact .image-container {
+    display: block;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .slider {
     width: 900px;
+    img {
+      width: auto;
+      height: 350px;
+    }
+  }
+
+  #skills .cell {
+    vertical-align: center;
+    .tekst-container {
+      justify-content: center;
+    }
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .slider {
     width: 1200px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem 1.2rem;
+
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
   }
 }

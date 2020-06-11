@@ -28,6 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   z-index: 1;
 }
 .slider-container > div > div {
@@ -39,7 +40,7 @@
   width: 350px;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(7, 100%);
+  grid-template-columns: repeat(9, 100%);
   transform: translateX(-800px);
 }
 .img {
@@ -74,26 +75,24 @@
 } */
 .btn {
   position: absolute;
-  top: 50%;
+  top: 100%;
   transform: translateY(-50%);
   padding: 1rem 1.2rem;
-
+  transform: scale(2);
   border-radius: 5px;
   background-color: transparent;
   outline: none;
   border: none;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 #prev {
   left: 5%;
   z-index: 3000;
-  display: none;
 }
 #next {
   right: 5%;
   z-index: 3000;
-  display: none;
 }
 .btn:hover {
   opacity: 0.8;
@@ -101,8 +100,8 @@
 
 ul {
   text-align: center;
-  position: relative;
-  top: 100%;
+  /*   position: relative;
+  top: 100%; */
   z-index: 3000;
   /* left: 86%; */
   /* transform: translateX(-50%); */

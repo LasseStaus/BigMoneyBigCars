@@ -5,8 +5,8 @@
 }
 
 img {
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: auto;
 }
 
 .pic {
@@ -19,6 +19,21 @@ img {
   max-width: 360px;
   max-height: 360px;
   background-size: cover;
+}
+#home .cell {
+  vertical-align: center;
+}
+#skills {
+  height: 100%;
+  .cell {
+    vertical-align: baseline;
+  }
+  .container {
+    height: 100%;
+    img {
+      width: 100%;
+    }
+  }
 }
 .pic1 {
   background-image: url("/static/imgs/t.jpg");
@@ -64,4 +79,6 @@ img {
   --font-4: "PT Serif", serif;
   --font-5: "PT Sans", sans-serif;
   --font-6: "Quicksand", sans-serif;
+  --font-7: "Raleway", sans-serif;
+  --font-8: "Playfair Display", serif;
 }
