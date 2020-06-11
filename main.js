@@ -18,11 +18,11 @@ let optionsObserver;
 function observerF() {
   optionsObserver = {
     root: null,
-    rootMargin: "100%",
-    threshold: 0.01
+    rootMargin: "",
+    threshold: 0.8,
   };
   let observer = new IntersectionObserver(beTouching, optionsObserver);
-  document.querySelectorAll(".the-container section").forEach(section => {
+  document.querySelectorAll(".the-container section").forEach((section) => {
     observer.observe(section);
     //console.log("watching", p.textContent);
   });
@@ -30,20 +30,20 @@ function observerF() {
 let tester = document.querySelector(".tester");
 function beTouching(entries, ob) {
   //entries all 30 paragraphs
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log(entry.target);
       tester.textContent = entry.target.id;
 
       console.log(dAtags);
-      dAtags.forEach(e => {
+      dAtags.forEach((e) => {
         e.classList.remove("marked");
       });
-      mAtags.forEach(e => {
+      mAtags.forEach((e) => {
         e.classList.remove("marked");
       });
 
-      nAtags.forEach(e => {
+      nAtags.forEach((e) => {
         console.log(e);
         e.classList.remove("fa");
       });
@@ -170,7 +170,7 @@ function update() {
   size = slides[index].clientWidth;
 
   slider.style.transform = "translateX(" + -size * index + "px)";
-  options.forEach(op => op.classList.remove("colored"));
+  options.forEach((op) => op.classList.remove("colored"));
   options[op_index].classList.add("colored");
 }
 
@@ -219,8 +219,8 @@ slider.addEventListener("transitionend", () => {
   }
 });
 
-buttons.forEach(btn => btn.addEventListener("click", btnCheck));
-options.forEach(option => option.addEventListener("click", optionFunc));
+buttons.forEach((btn) => btn.addEventListener("click", btnCheck));
+options.forEach((option) => option.addEventListener("click", optionFunc));
 const nAtags = document.querySelectorAll(".navigation > a");
 const dAtags = document.querySelectorAll("#desktop-menu > a");
 const toggler = document.querySelector(".menu__toggler");
@@ -236,7 +236,7 @@ toggler.addEventListener("click", () => {
   menu.classList.toggle("shadow");
 });
 
-mAtags.forEach(a => {
+mAtags.forEach((a) => {
   a.addEventListener("click", () => {
     document.querySelector(".the-container").classList.remove("blurred");
 
@@ -276,42 +276,36 @@ projectElement(data2, p); */
   gallery(data2, e);
 }); */
 
-(function($) {
+(function ($) {
   "use strict";
   var form = $(".contact__form"),
     message = $(".contact__msg"),
     form_data;
   // Success function
   function done_func(response) {
-    message
-      .fadeIn()
-      .removeClass("alert-danger")
-      .addClass("alert-success");
+    message.fadeIn().removeClass("alert-danger").addClass("alert-success");
     message.text(response);
-    setTimeout(function() {
+    setTimeout(function () {
       message.fadeOut();
     }, 2000);
     form.find('input:not([type="submit"]), textarea').val("");
   }
   // fail function
   function fail_func(data) {
-    message
-      .fadeIn()
-      .removeClass("alert-success")
-      .addClass("alert-success");
+    message.fadeIn().removeClass("alert-success").addClass("alert-success");
     message.text(data.responseText);
-    setTimeout(function() {
+    setTimeout(function () {
       message.fadeOut();
     }, 2000);
   }
 
-  form.submit(function(e) {
+  form.submit(function (e) {
     e.preventDefault();
     form_data = $(this).serialize();
     $.ajax({
       type: "POST",
       url: form.attr("action"),
-      data: form_data
+      data: form_data,
     })
       .done(done_func)
       .fail(fail_func);
