@@ -11,7 +11,7 @@ section span {
   font-weight: 400;
 }
 p {
-  line-height: 20px;
+  line-height: normal;
 }
 nav {
   color: white;
@@ -57,6 +57,7 @@ nav {
     padding-left: 1rem;
     padding-bottom: 1rem;
     font-size: 18px;
+    margin: 0 !important;
   }
 }
 #summary .tekst-container,
@@ -85,11 +86,6 @@ nav {
       font-weight: 700;
       margin-top: 0.5rem;
     }
-    .image-container {
-      a p {
-        padding: 0;
-      }
-    }
   }
 }
 
@@ -99,4 +95,67 @@ nav {
 }
 .end {
   font-weight: bold;
+}
+
+@media only screen and (min-width: 700px) {
+  #summary h2,
+  #projects .cell > h2,
+  #contact h2 {
+    font-size: 30px;
+    padding-bottom: 1rem;
+
+    width: 100vw;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #summary .tekst-container,
+  #contact .tekst-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .skills-container .skills {
+    div.skill {
+      height: 120px;
+    }
+    > div {
+      font-size: 35px !important;
+    }
+    p {
+      font-size: 25px !important;
+    }
+  }
+  #summary .tekst-container p:first-child,
+  #contact p:first-child {
+    margin-top: 50px;
+  }
+  .slider img {
+    width: 400px;
+  }
+
+  .slider-container > div {
+    height: auto;
+  }
+  .slider {
+    .image-container {
+      p {
+        padding-bottom: 30px;
+      }
+    }
+    .tekst-container {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  #contact a {
+    p {
+      font-size: 22px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
 }

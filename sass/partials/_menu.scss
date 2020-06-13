@@ -17,11 +17,13 @@ nav {
   margin-left: 2vw;
   opacity: 1;
   transition: 0.3s ease-in-out;
-  color: var(--nav-color);
+  color: white;
   opacity: 1;
-  transition: 0.3s ease-in-out;
+  transition: 0.1s ease-in-out;
   font-size: 1.4rem;
   font-weight: bold;
+
+  border-bottom: none;
 }
 
 .mobile-menu-dropdown {
@@ -181,8 +183,11 @@ nav {
   transition: 0.3s ease-in-out;
 }
 #desktop-menu > a:hover {
-  border: none;
-  transition: 0.2s ease-in-out;
+  border-bottom: 2px solid white;
+
+  padding-bottom: 2px;
+
+  text-shadow: 1px 0px 1px white;
 }
 
 .atags-mobile-menu a.marked {
