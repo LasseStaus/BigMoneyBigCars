@@ -13,28 +13,68 @@ textarea {
   padding: 1.5vh;
 }
 .col-12 {
-  background: var(--color-8);
+  background: #2b706c;
 }
 form {
   width: 100%;
-  border: 8px solid var(--color-8);
+  border: 8px solid #2b706c;
 
-  background-color: var(--color-3);
+  background-color: #2b706c;
   border-radius: 8px;
 }
 
-input.butn {
+.butn {
   margin-left: 2px;
   margin-right: 2px;
   cursor: pointer;
-  border-bottom: 4px solid var(--color-7);
-  background-color: var(--color-8);
-  color: var(--color-3);
+
+  background-color: #5c7c81;
+  color: white;
   transition: 0.2s ease-in-out;
-  border: 3px solid var(--color-8);
+  background-color: rgb(35, 76, 122);
+  width: 100%;
+  color: white;
+  transition: 0.2s ease-in-out;
+  height: 55px;
+  border: none;
+  border: 2px solid black;
+  border-radius: 2px;
 }
-input.butn:hover {
-  background-color: snow;
-  color: black;
+.butn:hover {
+  background-color: rgb(92, 142, 199);
+  color: white;
   letter-spacing: 1px;
+}
+.invalid_text {
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+  color: #dd2b21;
+  display: inline;
+}
+
+.invalid_text {
+  display: none;
+
+  padding-left: 2px;
+  text-align: left;
+}
+
+.invalid + .invalid_text {
+  display: table;
+}
+
+div.alert {
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+input:valid {
+  background: url(/static/billeder/yes3.png) no-repeat scroll 7px 7px;
+  background-size: contain;
+  background-size: 23px;
+  background-position: 99.3% 70%;
+  background-color: white;
 }

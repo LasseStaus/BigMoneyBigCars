@@ -46,7 +46,21 @@ nav {
   margin-bottom: 1rem;
 }
 
-#summary .tekst-container {
+#contact a {
+  i {
+    padding-right: 5px;
+  }
+  p {
+    color: #2b706c;
+    text-align: left;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-size: 18px;
+  }
+}
+#summary .tekst-container,
+#contact .tekst-container {
   padding-left: 12px;
   padding-right: 12px;
 }
