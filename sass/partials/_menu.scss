@@ -1,0 +1,197 @@
+@use "partials/mixins";
+@use "partials/basic";
+nav {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  @include mixins.gridCenter;
+  //background-image: linear-gradient(to right bottom, #303030, #393939, #424242, #4b4b4b, #545454);
+  background: #2c4b50;
+  background: #2b706c;
+  height: var(--nav-height);
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: var(--nav-height);
+}
+#desktop-menu a {
+  margin-left: 2vw;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  color: var(--nav-color);
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.mobile-menu-dropdown {
+  position: absolute;
+  z-index: 998;
+  background: #303030;
+  background: #2c4b50;
+  height: 100vh;
+  display: inline-block;
+  transition: 300ms right ease-in-out;
+  width: 100%;
+  top: 0;
+  right: -100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow {
+  // filter: drop-shadow(0 0 0.75rem black);
+  box-shadow: -12px 3px 21px -8px rgba(31, 31, 31, 0.76);
+}
+
+.blurred {
+  filter: blur(3px) grayscale(60%);
+}
+.mobile-menu-dropdown.active {
+  right: 0;
+
+  /*  background-image: url();
+      background-size: cover;
+      background-position: center;*/
+}
+
+.atags-mobile-menu a {
+  display: flex;
+  padding: 10vw;
+  justify-content: flex-end;
+  position: relative;
+  color: white;
+  text-align: left;
+
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1px;
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* burgermenu'en & span's rotationer  -START- */
+
+.menu__toggler {
+  z-index: 999;
+  grid-column: 5;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  left: 26px;
+}
+
+.menu__toggler span,
+.menu__toggler span::before,
+.menu__toggler span::after {
+  position: absolute;
+  content: "";
+
+  width: 28px;
+  height: 2.5px;
+  background: #ebebeb;
+  border-radius: 20px;
+  transition: 300ms ease-in-out;
+}
+
+.menu__toggler span::before {
+  top: -8px;
+}
+
+.menu__toggler span::after {
+  top: 8px;
+}
+
+.menu__toggler.active > span {
+  background: transparent;
+}
+
+.menu__toggler.active > span::before,
+.menu__toggler.active > span::after {
+  background: #ebebeb;
+  filter: contrast(11);
+  top: 0px;
+}
+
+.menu__toggler.active > span::before {
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+}
+
+.menu__toggler.active > span::after {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+/* burgermenu'en & span's rotationer SLUT*/
+/* Animation til text -START- */
+.fade-in-left {
+  /*   -webkit-animation: fadeinleft 600ms ease-in-out;
+    -moz-animation: fadeinleft 600ms ease-in-out;
+    -o-animation: fadeinleft 600ms ease-in-out;
+    -ms-animation: fadeinleft 600ms ease-in-out; */
+  // animation: fadeinleft 1000ms linear;
+}
+
+@keyframes fadeinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.navigation {
+  display: flex;
+  display: none;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+
+  flex-direction: column;
+  z-index: 7000;
+}
+.navigation a {
+  transform: rotate(45deg);
+}
+.tester {
+  grid-column: 3;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 1;
+  font-weight: bold;
+}
+
+#desktop-menu > a.marked {
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--color-8);
+  transition: 0.3s ease-in-out;
+}
+#desktop-menu > a:hover {
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.atags-mobile-menu a.marked {
+}
+/* Animation til text -SLUT- */
+
+/* Mobile nav & Burgermenu sektion -SLUT- */
+
+/* Desktop Menu -START- */
+a {
+  text-decoration: none;
+}
+
+#desktop-menu {
+  display: none;
+  grid-column: 4 / span 2;
+}

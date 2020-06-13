@@ -1,0 +1,88 @@
+@use "partials/basic";
+
+h1,
+h2,
+h3,
+h4,
+p,
+section span {
+  font-size: 14px;
+  padding-bottom: 1rem;
+  font-weight: 400;
+}
+p {
+  line-height: 20px;
+}
+nav {
+  color: white;
+}
+.tester {
+  padding: 0;
+}
+#projects h2 {
+  font-weight: 700;
+  font-size: 35px;
+  padding-bottom: 1rem;
+  text-align: left;
+  width: 100%;
+  padding-left: 0.5rem;
+}
+
+#summary h2,
+#projects .cell > h2,
+#contact h2 {
+  font-weight: 700;
+  font-size: 25px;
+  padding-bottom: 1rem;
+  color: white;
+  text-align: center;
+  background: #5c7c81;
+  width: 100vw;
+
+  padding: 0;
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#summary .tekst-container {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.skills-container h2 {
+  font-weight: 700;
+  font-size: 35px;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+#projects {
+  h2 {
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .slider {
+    .tekst-container h2 {
+      font-size: 22px;
+      margin-bottom: 1rem;
+      padding: 0;
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+    .image-container {
+      a p {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.manchet {
+  font-weight: 600;
+  font-size: 16px;
+}
+.end {
+  font-weight: bold;
+}

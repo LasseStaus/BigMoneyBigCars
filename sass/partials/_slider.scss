@@ -33,6 +33,7 @@
 }
 .slider-container > div > div {
   overflow: hidden;
+
   //box-shadow: 0px 0px 41px -1px rgba(0, 0, 0, 0.75);
 }
 
@@ -73,12 +74,26 @@
   left: 0;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 } */
+
+.btn-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding-left: 30px; */
+  /* padding-right: 30px; */
+  width: 100vw;
+  position: relative;
+  top: -46px;
+}
 .btn {
-  position: absolute;
-  top: 100%;
-  transform: translateY(-50%);
   padding: 1rem 1.2rem;
-  transform: scale(2);
+
   border-radius: 5px;
   background-color: transparent;
   outline: none;
@@ -109,13 +124,15 @@ ul {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  padding-top: 1rem;
   list-style: none;
 }
 ul li {
   width: 18px;
   height: 18px;
-  margin: 0.9rem;
-  border: 2.5px solid var(--color-2);
+  margin-left: 2px;
+  margin-right: 2px;
+  border: 2.5px solid #303030b9;
   border-radius: 50%;
   cursor: pointer;
 }
