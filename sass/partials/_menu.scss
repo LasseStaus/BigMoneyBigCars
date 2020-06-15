@@ -6,31 +6,41 @@ nav {
   top: 0;
   @include mixins.gridCenter;
   //background-image: linear-gradient(to right bottom, #303030, #393939, #424242, #4b4b4b, #545454);
-  background: #2c4b50;
-  background: #2b706c;
+  background: #303030;
+  // background: #2c4b50;
+  // background: #2b706c;
   height: var(--nav-height);
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: var(--nav-height);
+  border-bottom: 1px solid #322f31;
 }
-#desktop-menu a {
+#desktop-menu a,
+.resume {
   margin-left: 2vw;
   opacity: 1;
   transition: 0.3s ease-in-out;
-  color: white;
+  color: #303030;
+  color: #322f31;
   opacity: 1;
   transition: 0.1s ease-in-out;
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 400;
 
   border-bottom: none;
+}
+
+.resume {
+  grid-column: 1;
+
+  justify-self: start;
 }
 
 .mobile-menu-dropdown {
   position: absolute;
   z-index: 998;
   background: #303030;
-  background: #2c4b50;
+
   height: 100vh;
   display: inline-block;
   transition: 300ms right ease-in-out;
@@ -183,9 +193,9 @@ nav {
   transition: 0.3s ease-in-out;
 }
 #desktop-menu > a:hover {
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid #322f31;
 
-  padding-bottom: 2px;
+  padding-bottom: 3px;
 
   text-shadow: 1px 0px 1px white;
 }

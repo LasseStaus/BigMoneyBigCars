@@ -13,13 +13,15 @@ textarea {
   padding: 1.5vh;
 }
 .col-12 {
-  background: #2b706c;
+  background: #303030;
 }
 form {
   width: 100%;
-  border: 8px solid #2b706c;
+  border: 8px solid #322f31;
 
-  background-color: #2b706c;
+  background-color: #322f31;
+  padding-bottom: 5px;
+
   border-radius: 8px;
 }
 
@@ -28,22 +30,23 @@ form {
   margin-right: 2px;
   cursor: pointer;
 
-  background-color: #5c7c81;
-  color: white;
+  border: 1px solid white;
+  background-color: #5a5a5ae7;
   transition: 0.2s ease-in-out;
-  background-color: rgb(35, 76, 122);
-  width: 100%;
   color: white;
+  width: 100%;
+  margin: 0;
+
   transition: 0.2s ease-in-out;
   height: 55px;
   border: none;
-  border: 2px solid black;
+
   border-radius: 2px;
 }
 .butn:hover {
-  background-color: rgb(92, 142, 199);
-  color: white;
-  letter-spacing: 1px;
+  background-color: rgb(235, 235, 235);
+  color: #303030;
+  font-weight: 700;
 }
 .invalid_text {
   font-size: 0.7rem;
