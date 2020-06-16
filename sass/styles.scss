@@ -123,7 +123,6 @@ body {
   cursor: pointer;
 }
 section {
-  max-width: 1180px;
   margin: 0 auto;
   scroll-snap-type: both mandatory;
   scroll-snap-align: center;
@@ -133,6 +132,10 @@ section {
 }
 section > article {
   max-width: 1180px;
+  display: table;
+}
+#summary article {
+  height: 100%;
 }
 
 #home/* .current */ {
@@ -140,11 +143,11 @@ section > article {
   $time: 1.5s;
   .headline-container {
     h1 {
-      transition: all $time ease-in-out;
-      transition-delay: $delay;
+      /*     transition: all $time ease-in-out;
+      transition-delay: $delay; */
       transform: translateX(0%);
       font-style: normal;
-      font-size: 25px;
+      font-size: 18px;
       font-weight: 300;
       color: #303030;
       text-shadow: 0px 1px 0px #303030;
@@ -152,25 +155,28 @@ section > article {
     }
     h2 {
       //   color: red;
-      transition: all $time ease-in-out;
-      transition-delay: $delay * 2;
+      /*  transition: all $time ease-in-out;
+      transition-delay: $delay * 2; */
       transform: translateX(0%);
       font-weight: 600;
-      font-size: 20px;
+
+      font-size: 18px;
+
       font-style: normal;
       padding-bottom: 2rem;
       padding-top: 2rem;
       text-shadow: -1px 0px 1px #303030;
-      font-size: 25px;
+      font-size: 18px;
     }
     h3 {
+      display: block;
       //   color: red;
-      transition: all $time ease-in;
-      transition-delay: $delay * 3;
+      /*      transition: all $time ease-in;
+      transition-delay: $delay * 3; */
       transform: translateX(0%);
       font-style: normal;
-      font-size: 22px;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 600;
       padding: 0;
       text-shadow: 0px 1px 0px #303030;
       color: black;
@@ -524,6 +530,22 @@ section > article {
     margin: 0;
   }
 
+  .slider-container > div > div {
+    overflow: hidden;
+
+    //box-shadow: 0px 0px 41px -1px rgba(0, 0, 0, 0.75);
+  }
+  #home .headline-container {
+    h1,
+    h2,
+    h3 {
+      font-size: 22px;
+    }
+  }
+  #summary .tekst-container {
+    width: 40%;
+  }
+
   .arrow {
     display: flex;
   }
@@ -564,7 +586,6 @@ section > article {
     }
   }
   #summary > article {
-    display: contents;
   }
   #home .container .headline-container {
     align-self: auto;
@@ -582,7 +603,7 @@ section > article {
     justify-items: center;
     align-items: center;
   }
-  #summary {
+  #summary article {
     max-width: 1600px;
   }
   .cell {

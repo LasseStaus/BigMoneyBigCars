@@ -35,9 +35,12 @@ nav {
 
   justify-self: start;
 }
+.resume:hover {
+  font-weight: 700;
+}
 
 .mobile-menu-dropdown {
-  position: absolute;
+  position: fixed;
   z-index: 998;
   background: #303030;
 
