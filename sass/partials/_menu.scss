@@ -6,7 +6,7 @@ nav {
   top: 0;
   @include mixins.gridCenter;
   //background-image: linear-gradient(to right bottom, #303030, #393939, #424242, #4b4b4b, #545454);
-  background: #303030;
+  background: #87afc7;
   // background: #2c4b50;
   // background: #2b706c;
   height: var(--nav-height);
@@ -16,15 +16,16 @@ nav {
 }
 #desktop-menu a,
 .resume {
+  display: none;
   margin-left: 2vw;
   opacity: 1;
   transition: 0.3s ease-in-out;
   color: #303030;
-  color: #322f31;
+  color: white;
   opacity: 1;
   transition: 0.1s ease-in-out;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
 
   border-bottom: none;
 }
@@ -35,14 +36,16 @@ nav {
   justify-self: start;
 }
 .resume:hover {
+  border-bottom: 1px solid white;
+
   font-weight: bold;
-  color: #87afc7;
+  padding-bottom: 3px;
 }
 
 .mobile-menu-dropdown {
   position: fixed;
   z-index: 998;
-  background: #303030;
+  background: #87afc7;
 
   height: 100vh;
   display: inline-block;
@@ -112,7 +115,7 @@ nav {
 
   width: 28px;
   height: 2.5px;
-  background: #ebebeb;
+  background: white;
   border-radius: 20px;
   transition: 300ms ease-in-out;
 }
@@ -131,7 +134,7 @@ nav {
 
 .menu__toggler.active > span::before,
 .menu__toggler.active > span::after {
-  background: #ebebeb;
+  background: white;
   filter: contrast(11);
   top: 0px;
 }
@@ -196,9 +199,8 @@ nav {
   transition: 0.3s ease-in-out;
 }
 #desktop-menu > a:hover {
-  border-bottom: 1px solid #87afc7;
+  border-bottom: 1px solid white;
 
-  color: #87afc7;
   font-weight: bold;
   padding-bottom: 3px;
 }

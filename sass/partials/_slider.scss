@@ -92,6 +92,9 @@
   width: 100vw;
   position: relative;
   top: -46px;
+  i {
+    color: #87afc7;
+  }
 }
 .btn {
   padding: 1rem 1.2rem;
@@ -134,11 +137,10 @@ ul li {
   height: 18px;
   margin-left: 2px;
   margin-right: 2px;
-  border: 2.5px solid #a2a2a2;
+  border: 2.5px solid #6c8c9f;
   border-radius: 50%;
   cursor: pointer;
 }
 ul li.colored {
-  background-color: #303030;
-  border: 2.5px solid #303030b9;
+  background-color: #87afc7;
 }

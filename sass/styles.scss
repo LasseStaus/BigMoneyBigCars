@@ -32,13 +32,8 @@ body {
 .the-container {
   height: calc(100vh - var(--nav-height));
 
-  background-color: #b8c6db;
-  background-image: linear-gradient(180deg, #303030 0, #545454 54%);
+  background-color: white;
 
-  background-image: linear-gradient(to right bottom, #303030, #393939, #424242, #4b4b4b, #545454);
-  background-image: linear-gradient(to left bottom, #d1d1d1, #dadada, #e3e3e3, #ececec, #ebebeb);
-  background-image: none;
-  background-color: rgb(248, 248, 248);
   /*   background-image: url(/static/imgs/unnamed.jpg);
   background-size: cover;
   background-repeat: no-repeat; */
@@ -149,7 +144,7 @@ section > article {
       transition-delay: $delay; */
       transform: translateX(0%);
       font-style: normal;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 300;
       color: #303030;
       padding: 0;
@@ -160,7 +155,7 @@ section > article {
       transition-delay: $delay * 2; */
       transform: translateX(0%);
 
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
 
       font-style: normal;
@@ -168,8 +163,6 @@ section > article {
       text-transform: uppercase;
 
       padding-top: 16px;
-
-      font-size: 18px;
     }
     h3 {
       display: block;
@@ -180,7 +173,7 @@ section > article {
       font-weight: 500;
       color: #303030;
       font-style: normal;
-      font-size: 18px;
+      font-size: 17px;
       padding: 0;
     }
   }
@@ -227,7 +220,7 @@ section > article {
 }
 .link p {
   cursor: pointer;
-  color: black;
+  color: #87afc7;
   transition: 0.3s;
   font-weight: 700;
 }
@@ -532,6 +525,10 @@ section > article {
     width: 100%;
     margin: 0;
   }
+  #desktop-menu a,
+  .resume {
+    display: block;
+  }
 
   form {
     width: 100%;
@@ -539,17 +536,21 @@ section > article {
     background-color: #87afc7;
     border-radius: 15px;
     padding-bottom: 10px;
+    box-shadow: 0px 0px 2px 1px;
     .mail input,
     .mail textarea {
       background: white;
       border: 0.5px solid #a2a2a2;
     }
     .butn {
-      background: transparent;
+      background: white;
+      border-radius: 5px;
+      border: 1px solid #303030;
+      color: #303030;
       &:hover {
-        background: #f5f5f5;
+        background: rgb(209, 208, 208);
         border-radius: 15px;
-        color: #303030;
+        color: white;
       }
     }
     .col-12 {
@@ -572,8 +573,7 @@ section > article {
   }
 
   nav {
-    border-bottom: 1px solid #322f31;
-    background-color: rgb(253, 252, 252);
+    border-bottom: 0.5px solid grey;
   }
   .slider-container > div > div {
     overflow: hidden;
@@ -655,6 +655,9 @@ section > article {
   }
   .slider {
     width: 1200px;
+  }
+  section {
+    height: calc(100vh - var(--nav-height) - var(--scrollbar-height));
   }
   p {
     font-size: 16px;
