@@ -13,7 +13,6 @@ nav {
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: var(--nav-height);
-  border-bottom: 1px solid #322f31;
 }
 #desktop-menu a,
 .resume {
@@ -36,7 +35,8 @@ nav {
   justify-self: start;
 }
 .resume:hover {
-  font-weight: 700;
+  font-weight: bold;
+  color: #87afc7;
 }
 
 .mobile-menu-dropdown {
@@ -196,11 +196,11 @@ nav {
   transition: 0.3s ease-in-out;
 }
 #desktop-menu > a:hover {
-  border-bottom: 1px solid #322f31;
+  border-bottom: 1px solid #87afc7;
 
+  color: #87afc7;
+  font-weight: bold;
   padding-bottom: 3px;
-
-  text-shadow: 1px 0px 1px white;
 }
 
 .atags-mobile-menu a.marked {

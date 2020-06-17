@@ -8,7 +8,9 @@
   position: relative;
   height: 100vh;
   width: 100vw;
+  left: 0;
   overflow: hidden;
+  margin-top: 50px;
 }
 
 .slider-container {
@@ -132,10 +134,11 @@ ul li {
   height: 18px;
   margin-left: 2px;
   margin-right: 2px;
-  border: 2.5px solid #303030b9;
+  border: 2.5px solid #a2a2a2;
   border-radius: 50%;
   cursor: pointer;
 }
 ul li.colored {
-  background-color: var(--color-1);
+  background-color: #303030;
+  border: 2.5px solid #303030b9;
 }

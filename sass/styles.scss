@@ -142,6 +142,8 @@ section > article {
   $delay: 1s;
   $time: 1.5s;
   .headline-container {
+    color: #303030;
+    color: #87afc7;
     h1 {
       /*     transition: all $time ease-in-out;
       transition-delay: $delay; */
@@ -150,7 +152,6 @@ section > article {
       font-size: 18px;
       font-weight: 300;
       color: #303030;
-      text-shadow: 0px 1px 0px #303030;
       padding: 0;
     }
     h2 {
@@ -158,14 +159,16 @@ section > article {
       /*  transition: all $time ease-in-out;
       transition-delay: $delay * 2; */
       transform: translateX(0%);
-      font-weight: 600;
 
       font-size: 18px;
+      font-weight: 700;
 
       font-style: normal;
-      padding-bottom: 2rem;
-      padding-top: 2rem;
-      text-shadow: -1px 0px 1px #303030;
+      padding-bottom: 16px;
+      text-transform: uppercase;
+
+      padding-top: 16px;
+
       font-size: 18px;
     }
     h3 {
@@ -174,12 +177,11 @@ section > article {
       /*      transition: all $time ease-in;
       transition-delay: $delay * 3; */
       transform: translateX(0%);
+      font-weight: 500;
+      color: #303030;
       font-style: normal;
       font-size: 18px;
-      font-weight: 600;
       padding: 0;
-      text-shadow: 0px 1px 0px #303030;
-      color: black;
     }
   }
   .headshot-container {
@@ -231,7 +233,7 @@ section > article {
 }
 
 .link p:hover {
-  color: var(--color-1);
+  color: #87afc7;
 }
 .tekst-container {
   width: 100%;
@@ -436,6 +438,7 @@ section > article {
   #next {
     display: block;
     font-size: 33px;
+    color: #87afc7;
   }
   .scontent {
   }
@@ -530,6 +533,48 @@ section > article {
     margin: 0;
   }
 
+  form {
+    width: 100%;
+    border: 10px solid #87afc7;
+    background-color: #87afc7;
+    border-radius: 15px;
+    padding-bottom: 10px;
+    .mail input,
+    .mail textarea {
+      background: white;
+      border: 0.5px solid #a2a2a2;
+    }
+    .butn {
+      background: transparent;
+      &:hover {
+        background: #f5f5f5;
+        border-radius: 15px;
+        color: #303030;
+      }
+    }
+    .col-12 {
+      background: none;
+    }
+  }
+  .the-container {
+    background: white;
+  }
+
+  input,
+  textarea {
+    background: #a2a2a2;
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+  .scontainer {
+    margin-top: 0;
+  }
+
+  nav {
+    border-bottom: 1px solid #322f31;
+    background-color: rgb(253, 252, 252);
+  }
   .slider-container > div > div {
     overflow: hidden;
 
@@ -539,7 +584,7 @@ section > article {
     h1,
     h2,
     h3 {
-      font-size: 22px;
+      font-size: 25px;
     }
   }
   #summary .tekst-container {
@@ -552,9 +597,7 @@ section > article {
   section h3 {
     display: block;
   }
-  nav {
-    background: #fff;
-  }
+
   #contact a p {
     padding: 0;
     font-size: 18px;
